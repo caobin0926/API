@@ -8,6 +8,7 @@ import allure
 
 @allure.feature('登录接口')
 class TestLogin:
+    """测试登录接口"""
     ex = DoExcel(path.case_file, 'login')
     case = ex.get_cass()
     def setup_class(self):
