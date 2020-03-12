@@ -1,0 +1,127 @@
+{
+  "uid" : "bd97dfc2824a0a89",
+  "name" : "test_login[cases3]",
+  "fullName" : "test_login.TestLogin#test_login",
+  "historyId" : "83aed34d8a49c72e6fd1945191b71b3f",
+  "time" : {
+    "start" : 1583908502038,
+    "stop" : 1583908502307,
+    "duration" : 269
+  },
+  "status" : "broken",
+  "statusMessage" : "PermissionError: [Errno 13] Permission denied: 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx'",
+  "statusTrace" : "self = <API_1.testcases.test_login.TestLogin object at 0x000000000D02D320>, cases = <API_1.common.do_excel.Case object at 0x000000000CFB21D0>\n\n    @allure.story('测试场景')\n    @allure.suite('登录测试用例')\n    @pytest.mark.parametrize('cases',case)\n    def test_login(self,cases):\n        # global loger\n        allure.attach('请求参数：{}'.format(cases.data))\n        self.loger.loggers('INFO','请求方式:{};请求地址:{};请求参数:{}'.format(cases.method,cases.url,cases.data))\n        resp=self.http.requests(cases.method,url=cases.url,data=eval(cases.data))\n        allure.attach('响应结果:{}'.format(resp.text))\n        cases.actual=json.loads(resp.text)\n        self.loger.loggers('INFO','响应报文:{}'.format(cases.actual))\n        try:\n            assert (eval(cases.expected)==cases.actual)\n            cases.result='PASS'\n        except AssertionError as e:\n            cases.result='FAIL'\n            self.loger.loggers('ERROR','报错原因:{}'.format(e))\n            raise e\n        finally:\n            allure.attach('测试结果:{}'.format(cases.result))\n            # ex = DoExcel(path.case_file, 'login')\n>           self.ex.write_excel(int(cases.case_id)+1,str(cases.actual),cases.result)\n\ntest_login.py:40: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\common\\do_excel.py:42: in write_excel\n    self.wb.save(self.file_name)\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\openpyxl\\workbook\\workbook.py:396: in save\n    save_workbook(self, filename)\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\openpyxl\\writer\\excel.py:292: in save_workbook\n    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <zipfile.ZipFile [closed]>, file = 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx', mode = 'w', compression = 8, allowZip64 = True\n\n    def __init__(self, file, mode=\"r\", compression=ZIP_STORED, allowZip64=True):\n        \"\"\"Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',\n        or append 'a'.\"\"\"\n        if mode not in ('r', 'w', 'x', 'a'):\n            raise ValueError(\"ZipFile requires mode 'r', 'w', 'x', or 'a'\")\n    \n        _check_compression(compression)\n    \n        self._allowZip64 = allowZip64\n        self._didModify = False\n        self.debug = 0  # Level of printing: 0 through 3\n        self.NameToInfo = {}    # Find file info given name\n        self.filelist = []      # List of ZipInfo instances for archive\n        self.compression = compression  # Method of compression\n        self.mode = mode\n        self.pwd = None\n        self._comment = b''\n    \n        # Check if we were passed a file-like object\n        if isinstance(file, os.PathLike):\n            file = os.fspath(file)\n        if isinstance(file, str):\n            # No, it's a filename\n            self._filePassed = 0\n            self.filename = file\n            modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',\n                        'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}\n            filemode = modeDict[mode]\n            while True:\n                try:\n>                   self.fp = io.open(file, filemode)\nE                   PermissionError: [Errno 13] Permission denied: 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx'\n\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\zipfile.py:1090: PermissionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1583908498785,
+      "stop" : 1583908498845,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "PermissionError: [Errno 13] Permission denied: 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx'",
+    "statusTrace" : "self = <API_1.testcases.test_login.TestLogin object at 0x000000000D02D320>, cases = <API_1.common.do_excel.Case object at 0x000000000CFB21D0>\n\n    @allure.story('测试场景')\n    @allure.suite('登录测试用例')\n    @pytest.mark.parametrize('cases',case)\n    def test_login(self,cases):\n        # global loger\n        allure.attach('请求参数：{}'.format(cases.data))\n        self.loger.loggers('INFO','请求方式:{};请求地址:{};请求参数:{}'.format(cases.method,cases.url,cases.data))\n        resp=self.http.requests(cases.method,url=cases.url,data=eval(cases.data))\n        allure.attach('响应结果:{}'.format(resp.text))\n        cases.actual=json.loads(resp.text)\n        self.loger.loggers('INFO','响应报文:{}'.format(cases.actual))\n        try:\n            assert (eval(cases.expected)==cases.actual)\n            cases.result='PASS'\n        except AssertionError as e:\n            cases.result='FAIL'\n            self.loger.loggers('ERROR','报错原因:{}'.format(e))\n            raise e\n        finally:\n            allure.attach('测试结果:{}'.format(cases.result))\n            # ex = DoExcel(path.case_file, 'login')\n>           self.ex.write_excel(int(cases.case_id)+1,str(cases.actual),cases.result)\n\ntest_login.py:40: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\common\\do_excel.py:42: in write_excel\n    self.wb.save(self.file_name)\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\openpyxl\\workbook\\workbook.py:396: in save\n    save_workbook(self, filename)\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\openpyxl\\writer\\excel.py:292: in save_workbook\n    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <zipfile.ZipFile [closed]>, file = 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx', mode = 'w', compression = 8, allowZip64 = True\n\n    def __init__(self, file, mode=\"r\", compression=ZIP_STORED, allowZip64=True):\n        \"\"\"Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',\n        or append 'a'.\"\"\"\n        if mode not in ('r', 'w', 'x', 'a'):\n            raise ValueError(\"ZipFile requires mode 'r', 'w', 'x', or 'a'\")\n    \n        _check_compression(compression)\n    \n        self._allowZip64 = allowZip64\n        self._didModify = False\n        self.debug = 0  # Level of printing: 0 through 3\n        self.NameToInfo = {}    # Find file info given name\n        self.filelist = []      # List of ZipInfo instances for archive\n        self.compression = compression  # Method of compression\n        self.mode = mode\n        self.pwd = None\n        self._comment = b''\n    \n        # Check if we were passed a file-like object\n        if isinstance(file, os.PathLike):\n            file = os.fspath(file)\n        if isinstance(file, str):\n            # No, it's a filename\n            self._filePassed = 0\n            self.filename = file\n            modeDict = {'r' : 'rb', 'w': 'w+b', 'x': 'x+b', 'a' : 'r+b',\n                        'r+b': 'w+b', 'w+b': 'wb', 'x+b': 'xb'}\n            filemode = modeDict[mode]\n            while True:\n                try:\n>                   self.fp = io.open(file, filemode)\nE                   PermissionError: [Errno 13] Permission denied: 'E:\\\\workspace\\\\python_15\\\\API_1\\\\data\\\\cases.xlsx'\n\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36\\lib\\zipfile.py:1090: PermissionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8b54f14daa9b802d",
+      "name" : "a6a6ef26-2200-493e-a0e1-f5d8eca49d55-attachment.attach",
+      "source" : "8b54f14daa9b802d.attach",
+      "type" : "text/plain",
+      "size" : 59
+    }, {
+      "uid" : "f467c657309b8166",
+      "name" : "d111a786-f1b2-4032-aaf3-a8da39a7baa6-attachment.attach",
+      "source" : "f467c657309b8166.attach",
+      "type" : "text/plain",
+      "size" : 85
+    }, {
+      "uid" : "7f9018e04f1a58cb",
+      "name" : "6cc5a10f-dfc7-4cd3-a9b8-4f14eee9c27d-attachment.attach",
+      "source" : "7f9018e04f1a58cb.attach",
+      "type" : "text/plain",
+      "size" : 17
+    }, {
+      "uid" : "4e9c141ba3fff190",
+      "name" : "log",
+      "source" : "4e9c141ba3fff190.txt",
+      "type" : "text/plain",
+      "size" : 273
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1583908502680,
+      "stop" : 1583908502681,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "登录测试用例"
+  }, {
+    "name" : "feature",
+    "value" : "登录接口"
+  }, {
+    "name" : "story",
+    "value" : "测试场景"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "WIN-SE0CJLLHE5T"
+  }, {
+    "name" : "thread",
+    "value" : "2840-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "cases",
+    "value" : "<API_1.common.do_excel.Case object at 0x000000000CFB21D0>"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bd97dfc2824a0a89.json",
+  "parameterValues" : [ "<API_1.common.do_excel.Case object at 0x000000000CFB21D0>" ]
+}

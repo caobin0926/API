@@ -1,0 +1,126 @@
+2020-03-09 21:58:29,195-logger-INFO-28-读取测试用例：5
+2020-03-09 22:25:18,636-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-09 22:25:18,744-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-09 22:25:19,003-logger-INFO-28-测试结果:PASS
+2020-03-09 22:25:19,024-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-09 22:25:19,104-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-09 22:25:19,219-logger-INFO-28-测试结果:PASS
+2020-03-09 22:25:19,240-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-09 22:25:19,471-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:25:19,588-logger-INFO-28-测试结果:PASS
+2020-03-09 22:25:19,609-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-09 22:25:19,840-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:25:19,959-logger-INFO-28-测试结果:PASS
+2020-03-09 22:25:19,983-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-09 22:25:20,135-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-09 22:25:20,257-logger-INFO-28-测试结果:PASS
+2020-03-09 22:31:04,609-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-09 22:31:04,655-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-09 22:31:04,802-logger-INFO-28-测试结果:PASS
+2020-03-09 22:31:04,815-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-09 22:31:04,830-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-09 22:31:04,908-logger-INFO-28-测试结果:PASS
+2020-03-09 22:31:04,920-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-09 22:31:05,092-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:31:05,174-logger-INFO-28-测试结果:PASS
+2020-03-09 22:31:05,184-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-09 22:31:05,375-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:31:05,460-logger-INFO-28-测试结果:PASS
+2020-03-09 22:31:05,473-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-09 22:31:05,619-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-09 22:31:05,707-logger-INFO-28-测试结果:PASS
+2020-03-09 22:45:43,059-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-09 22:45:43,126-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-09 22:45:43,127-logger-ERROR-32-报错原因:assert {'code': '201..., 'status': 0} == {'code': '2010..., 'status': 0}
+  Omitting 3 identical items, use -vv to show
+  Differing items:
+  {'code': '2010'} != {'code': '20103'}
+  Use -v to get the full diff
+2020-03-09 22:45:43,281-logger-INFO-28-测试结果:FAIL
+2020-03-09 22:45:43,584-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-09 22:45:43,604-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-09 22:45:43,687-logger-INFO-28-测试结果:PASS
+2020-03-09 22:45:43,697-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-09 22:45:43,844-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:45:43,924-logger-INFO-28-测试结果:PASS
+2020-03-09 22:45:43,940-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-09 22:45:44,096-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:45:44,183-logger-INFO-28-测试结果:PASS
+2020-03-09 22:45:44,192-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-09 22:45:44,371-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-09 22:45:44,457-logger-INFO-28-测试结果:PASS
+2020-03-09 22:48:40,911-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-09 22:48:40,955-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-09 22:48:40,956-logger-ERROR-32-报错原因:assert {'code': '201..., 'status': 0} == {'code': '2010..., 'status': 0}
+  Omitting 3 identical items, use -vv to show
+  Differing items:
+  {'code': '2010'} != {'code': '20103'}
+  Use -v to get the full diff
+2020-03-09 22:48:41,108-logger-INFO-28-测试结果:FAIL
+2020-03-09 22:48:41,411-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-09 22:48:41,436-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-09 22:48:41,519-logger-INFO-28-测试结果:PASS
+2020-03-09 22:48:41,529-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-09 22:48:41,683-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:48:41,764-logger-INFO-28-测试结果:PASS
+2020-03-09 22:48:41,776-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-09 22:48:41,943-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-09 22:48:42,028-logger-INFO-28-测试结果:PASS
+2020-03-09 22:48:42,039-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-09 22:48:42,197-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-09 22:48:42,281-logger-INFO-28-测试结果:PASS
+2020-03-11 14:34:58,852-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-11 14:35:00,184-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-11 14:35:00,185-logger-ERROR-32-报错原因:assert {'code': '201..., 'status': 0} == {'code': '2010..., 'status': 0}
+  Omitting 3 identical items, use -vv to show
+  Differing items:
+  {'code': '2010'} != {'code': '20103'}
+  Use -v to get the full diff
+2020-03-11 14:35:00,529-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-11 14:35:00,998-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-11 14:35:01,097-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-11 14:35:01,937-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:35:02,041-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-11 14:35:02,297-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:35:02,398-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-11 14:35:02,575-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-11 14:35:02,680-logger-INFO-28-------------登录测试用例全部完成----------
+2020-03-11 14:37:45,923-logger-INFO-28--------------开始执行测试用例------------
+2020-03-11 14:37:45,928-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-11 14:37:47,006-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-11 14:37:47,006-logger-ERROR-32-报错原因:assert {'code': '201..., 'status': 0} == {'code': '2010..., 'status': 0}
+  Omitting 3 identical items, use -vv to show
+  Differing items:
+  {'code': '2010'} != {'code': '20103'}
+  Use -v to get the full diff
+2020-03-11 14:37:47,168-logger-INFO-28-测试结果:FAIL
+2020-03-11 14:37:47,371-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-11 14:37:47,391-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-11 14:37:47,507-logger-INFO-28-测试结果:PASS
+2020-03-11 14:37:47,529-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-11 14:37:47,690-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:37:47,809-logger-INFO-28-测试结果:PASS
+2020-03-11 14:37:47,832-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-11 14:37:47,979-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:37:48,100-logger-INFO-28-测试结果:PASS
+2020-03-11 14:37:48,123-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-11 14:37:48,266-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-11 14:37:48,388-logger-INFO-28-测试结果:PASS
+2020-03-11 14:37:48,395-logger-INFO-28-------------登录测试用例全部完成----------
+2020-03-11 14:40:12,777-logger-INFO-28--------------开始执行测试用例------------
+2020-03-11 14:40:12,782-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
+2020-03-11 14:40:12,820-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+2020-03-11 14:40:12,905-logger-INFO-28-测试结果:PASS
+2020-03-11 14:40:12,920-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
+2020-03-11 14:40:12,935-logger-INFO-28-响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+2020-03-11 14:40:13,016-logger-INFO-28-测试结果:PASS
+2020-03-11 14:40:13,026-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':'1'}
+2020-03-11 14:40:13,199-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:40:13,282-logger-INFO-28-测试结果:PASS
+2020-03-11 14:40:13,294-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573737','pwd':'123456'}
+2020-03-11 14:40:13,464-logger-INFO-28-响应报文:{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+2020-03-11 14:40:13,547-logger-INFO-28-测试结果:PASS
+2020-03-11 14:40:13,558-logger-INFO-28-请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
+2020-03-11 14:40:13,733-logger-INFO-28-响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+2020-03-11 14:40:13,819-logger-INFO-28-测试结果:PASS
+2020-03-11 14:40:13,823-logger-INFO-28-------------登录测试用例全部完成----------

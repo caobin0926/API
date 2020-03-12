@@ -1,0 +1,123 @@
+{
+  "uid" : "e5db2e6cc604938f",
+  "name" : "test_login[cases2]",
+  "fullName" : "test_login.TestLogin#test_login",
+  "historyId" : "5b31d18c9d58e5612fd7cf7bfee88705",
+  "time" : {
+    "start" : 1583908667525,
+    "stop" : 1583908667810,
+    "duration" : 285
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1583908665866,
+      "stop" : 1583908665924,
+      "duration" : 58
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8fe0f315f0f8c1d9",
+      "name" : "436855fa-4019-4c7a-b6b1-e6a2c4ca281d-attachment.attach",
+      "source" : "8fe0f315f0f8c1d9.attach",
+      "type" : "text/plain",
+      "size" : 54
+    }, {
+      "uid" : "f4f239b81be6e899",
+      "name" : "705b8ffc-52f3-474e-8df4-af6e3a9da640-attachment.attach",
+      "source" : "f4f239b81be6e899.attach",
+      "type" : "text/plain",
+      "size" : 85
+    }, {
+      "uid" : "b5aef74dd0494686",
+      "name" : "e4b7499f-fa89-4abd-b03e-089e6b21a663-attachment.attach",
+      "source" : "b5aef74dd0494686.attach",
+      "type" : "text/plain",
+      "size" : 17
+    }, {
+      "uid" : "3b359799cacb24ad",
+      "name" : "log",
+      "source" : "3b359799cacb24ad.txt",
+      "type" : "text/plain",
+      "size" : 325
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1583908668395,
+      "stop" : 1583908668396,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "登录接口"
+  }, {
+    "name" : "story",
+    "value" : "测试场景"
+  }, {
+    "name" : "suite",
+    "value" : "登录测试用例"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "WIN-SE0CJLLHE5T"
+  }, {
+    "name" : "thread",
+    "value" : "7960-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "cases",
+    "value" : "<API_1.common.do_excel.Case object at 0x000000000CFC62E8>"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5db2e6cc604938f.json",
+  "parameterValues" : [ "<API_1.common.do_excel.Case object at 0x000000000CFC62E8>" ]
+}
