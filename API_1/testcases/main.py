@@ -1,4 +1,5 @@
 import sys
 import pytest
 sys.path.append('./')
-pytest.main(["-s", "--alluredir", "./report"])
+# print()
+pytest.main(["-s", "--alluredir", "report"])
