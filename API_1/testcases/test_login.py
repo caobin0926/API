@@ -5,7 +5,8 @@ from API_1.config import path
 from API_1.common.do_logs import Logs
 import pytest
 import allure
-
+import sys
+sys.path.append('./')
 @allure.feature('登录接口')
 class TestLogin:
     """测试登录接口"""
