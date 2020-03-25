@@ -31,5 +31,6 @@ if __name__ == '__main__':
     data = {'mobilephone': '18106573747', 'pwd': '123456'}
     req=HttpRequests()
     resp=req.requests('get',url,data)
+    print(resp.url)
     print(resp.text)
 
