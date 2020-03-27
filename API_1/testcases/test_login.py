@@ -14,10 +14,9 @@ class TestLogin:
         self.http=HttpRequests()
         self.ex = DoExcel(path.case_file, 'login')
         self.loger = Logs('logger')
-        self.loger.loggers('INFO','-------------开始执行测试用例------------')
+        self.loger.loggers('INFO','-------------开始登录执行测试用例------------')
 
     @allure.story('测试场景')
-    @allure.suite('登录测试用例')
     @pytest.mark.parametrize('cases',case)
     def test_login(self,cases):
         # global loger

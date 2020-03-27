@@ -15,10 +15,9 @@ class TestRegister:
         self.http = HttpRequests()
         self.ex = DoExcel(path.case_file, 'register')
         self.loger = Logs('logger')
-        self.loger.loggers('INFO', '-------------开始执行测试用例------------')
+        self.loger.loggers('INFO', '-------------开始执行注册测试用例------------')
 
     @allure.story('测试场景')
-    @allure.suite('注册测试用例')
     @pytest.mark.parametrize('cases', case)
     def test_login(self, cases):
         # global loger
@@ -45,7 +44,7 @@ class TestRegister:
 
     def teardown_class(self):
         self.http.seesion.close()
-        self.loger.loggers('INFO', '------------登录测试用例全部完成----------')
+        self.loger.loggers('INFO', '------------注册测试用例全部完成----------')
 
 
 
