@@ -13,11 +13,11 @@ class Logs:
         file_handler.setLevel(cf.get_str('logs','level'))#输出日志级别
         file_handler.setFormatter(logging.Formatter(cf.get_str('logs','fmt')))
 
-        stream_handler=logging.StreamHandler()#控制台渠道
-        stream_handler.setLevel(cf.get_str('logs','level'))#输出日志级别
-        stream_handler.setFormatter(logging.Formatter(cf.get_str('logs','fmt')))
+        # stream_handler=logging.StreamHandler()#控制台渠道
+        # stream_handler.setLevel(cf.get_str('logs','level'))#输出日志级别
+        # stream_handler.setFormatter(logging.Formatter(cf.get_str('logs','fmt')))
         #建立收集器和输出的关联关系
-        self.logger.addHandler(stream_handler)
+        # self.logger.addHandler(stream_handler)
         self.logger.addHandler(file_handler)
 
     def loggers(self,level,message):
