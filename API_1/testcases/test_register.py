@@ -18,7 +18,7 @@ class TestRegister:
         self.loger.loggers('INFO', '-------------开始执行测试用例------------')
 
     @allure.story('测试场景')
-    @allure.suite('登录测试用例')
+    @allure.suite('注册测试用例')
     @pytest.mark.parametrize('cases', case)
     def test_login(self, cases):
         # global loger
