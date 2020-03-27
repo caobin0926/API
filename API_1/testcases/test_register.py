@@ -6,6 +6,7 @@ from API_1.common.do_excel import DoExcel
 from API_1.config import path
 from API_1.common.do_re import replace
 import json
+@allure.feature('注册接口')
 class TestRegister:
     """测试注册接口类"""
     ex = DoExcel(path.case_file, 'register')
