@@ -1,4 +1,0 @@
-[32mINFO    [0m logger:do_logs.py:28 -------------开始执行测试用例------------
-[32mINFO    [0m logger:do_logs.py:28 请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'','pwd':'123456'}
-[32mINFO    [0m logger:do_logs.py:28 响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
-[32mINFO    [0m logger:do_logs.py:28 测试结果:PASS

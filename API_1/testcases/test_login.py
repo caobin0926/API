@@ -24,6 +24,7 @@ class TestLogin:
         allure.attach('请求参数：{}'.format(cases.data))
         self.loger.loggers('INFO','请求方式:{};请求地址:{};请求参数:{}'.format(cases.method,cases.url,cases.data))
         resp=self.http.requests(cases.method,url=cases.url,data=eval(cases.data))
+        allure.attach('期望结果:{}'.format(cases.expected))
         allure.attach('响应结果:{}'.format(resp.text))
         cases.actual=json.loads(resp.text)
         self.loger.loggers('INFO','响应报文:{}'.format(cases.actual))

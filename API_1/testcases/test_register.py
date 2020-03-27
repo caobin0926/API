@@ -4,6 +4,7 @@ from API_1.common.httprequests import HttpRequests
 from API_1.common.do_logs import Logs
 from API_1.common.do_excel import DoExcel
 from API_1.config import path
+from API_1.common.do_re import replace
 import json
 class TestRegister:
     """测试注册接口类"""
@@ -19,9 +20,11 @@ class TestRegister:
     def test_register(self,case):
         allure.attach('请求参数：{}'.format(case.data))
         self.logs.loggers('INFO', '请求方式:{};请求地址:{};请求参数:{}'.format(case.method, case.url, case.data))
+        case.data=replace(case.data)
         resp=self.request.requests(case.method,case.url,data=eval(case.data))
         case.actual=json.loads(resp.text)
-        allure.attach('响应参数:{}'.format(case.actual))
+        allure.attach('期望结果:{}'.format(case.expected))
+        allure.attach('实际结果:{}'.format(case.actual))
         self.logs.loggers('INFO','响应参数：{}'.format(case.actual))
         try:
             assert eval(case.expected)==case.actual

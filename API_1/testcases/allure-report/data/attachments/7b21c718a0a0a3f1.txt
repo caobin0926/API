@@ -1,3 +1,0 @@
-[32mINFO    [0m logger:do_logs.py:28 请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573747','pwd':'123456'}
-[32mINFO    [0m logger:do_logs.py:28 响应报文:{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
-[32mINFO    [0m logger:do_logs.py:28 ------------登录测试用例全部完成----------

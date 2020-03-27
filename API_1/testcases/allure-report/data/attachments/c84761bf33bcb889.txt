@@ -1,2 +1,0 @@
-[32mINFO    [0m logger:do_logs.py:28 请求方式:POST;请求地址:/member/login;请求参数:{'mobilephone':'18106573731','pwd':''}
-[32mINFO    [0m logger:do_logs.py:28 响应报文:{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
