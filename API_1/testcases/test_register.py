@@ -12,7 +12,7 @@ class TestRegister:
     """测试注册接口类"""
     with open(path.register_yml,encoding='utf-8') as f:
         case=yaml.load(f,Loader=yaml.FullLoader)
-        print(case)
+        # print(case)
     def setup_class(self):
         self.http = HttpRequests()
         # self.ex = DoExcel(path.case_file, 'register')
