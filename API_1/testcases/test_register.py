@@ -21,7 +21,7 @@ class TestRegister:
 
     @allure.story('')
     @allure.suite('API接口测试用例')
-    @allure.title("{cases[title]}")
+    @allure.title("{cases['title']}")
     @allure.step('请求参数：{}')
     @pytest.mark.parametrize('cases', case)
     def test_login(self, cases):
