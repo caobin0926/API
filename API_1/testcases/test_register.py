@@ -19,10 +19,9 @@ class TestRegister:
         self.loger = Logs('logger')
         self.loger.loggers('INFO', '-------------开始执行注册测试用例------------')
 
-    @allure.story('')
+    @allure.story('测试场景')
     @allure.suite('API接口测试用例')
-    # @allure.title("{cases['title']}")
-    @allure.step('请求参数：{}')
+    @allure.title("{cases[title]}")
     @pytest.mark.parametrize('cases', case)
     def test_login(self, cases):
         allure.attach('请求参数：{}'.format(cases['data']))
