@@ -24,7 +24,6 @@ class TestRegister:
     # @allure.title("{cases['title']}")
     @allure.step('请求参数：{}')
     @pytest.mark.parametrize('cases', case)
-    # @allure.title("{cases[title]}")
     def test_login(self, cases):
         allure.attach('请求参数：{}'.format(cases['data']))
         datas=replace(str(cases['data']))

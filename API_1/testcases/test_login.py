@@ -22,7 +22,6 @@ class TestLogin:
     @allure.story('测试场景')
     @allure.suite('API接口测试用例')
     @pytest.mark.parametrize('cases',case)
-    # @allure.title("{cases.[title]}")
     def test_login(self,cases):
         # global loger
         allure.attach('请求参数：{}'.format(cases['data']))
