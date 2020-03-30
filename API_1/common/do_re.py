@@ -27,6 +27,7 @@ class TestData:
 
 
 
+
 import re
 def replace(data):
     data_new=data
@@ -36,7 +37,7 @@ def replace(data):
         g=result.group(1)
         if getattr(TestData,g):
             data_new=re.sub(p,str(getattr(TestData,g)),data_new,count=1)
-    return data_new
+    return eval((data_new))
 if __name__=='__main__':
     data= "{'mobilephone':'%register_cell%','pwd':'%register_pwd%'}"
     print(replace(data))

@@ -6,46 +6,46 @@ from API_1.common.do_excel import DoExcel
 from API_1.config import path
 from API_1.common.do_re import replace
 import json
+import yaml
 @allure.feature('注册接口')
 class TestRegister:
     """测试注册接口类"""
-    ex = DoExcel(path.case_file, 'register')
-    case = ex.get_cass()
-
+    with open(path.register_yml,encoding='utf-8') as f:
+        case=yaml.load(f,Loader=yaml.FullLoader)
+        print(case)
     def setup_class(self):
         self.http = HttpRequests()
-        self.ex = DoExcel(path.case_file, 'register')
+        # self.ex = DoExcel(path.case_file, 'register')
         self.loger = Logs('logger')
         self.loger.loggers('INFO', '-------------开始执行注册测试用例------------')
 
     @allure.story('')
     @allure.suite('API接口测试用例')
-    @allure.title("{cases.title}")
+    @allure.title("{cases[title]}")
     @allure.step('请求参数：{}')
     @pytest.mark.parametrize('cases', case)
     def test_login(self, cases):
-        allure.attach('请求参数：{}'.format(cases.data))
-        self.loger.loggers('INFO', '请求方式:{};请求地址:{};请求参数:{}'.format(cases.method, cases.url, cases.data))
-        cases.data=replace(cases.data)
-        resp = self.http.requests(cases.method, url=cases.url, data=eval(cases.data))
-        with allure.step('发送请求'):
-            allure.attach('期望结果:{}'.format(cases.expected))
-        with allure.step('响应结果'):
-            allure.attach('响应结果:{}'.format(resp.text))
-        cases.actual = json.loads(resp.text)
-        self.loger.loggers('INFO', '响应报文:{}'.format(cases.actual))
+        allure.attach('请求参数：{}'.format(cases['data']))
+        datas=replace(str(cases['data']))
+        self.loger.loggers('INFO', '请求方式:{};请求地址:{};请求参数:{}'.format(cases['method'], cases['url'], cases['data']))
+        # cases.data=replace(cases['data'])
+        resp = self.http.requests(cases['method'], url=cases['url'], data=datas)
+        allure.attach('期望结果:{}'.format(str(cases['expected'])))
+        allure.attach('响应结果:{}'.format(resp.text))
+        self.loger.loggers('INFO', '期望结果:{}'.format(cases['expected']))
+        self.loger.loggers('INFO', '实际结果:{}'.format(json.loads(resp.text)))
         try:
-            assert (eval(cases.expected) == cases.actual)
-            cases.result = 'PASS'
+            assert (cases['expected']) == json.loads(resp.text)
+            result = 'PASS'
         except AssertionError as e:
-            cases.result = 'FAIL'
+            result = 'FAIL'
             self.loger.loggers('ERROR', '报错原因:{}'.format(e))
             raise e
         finally:
-            allure.attach('测试结果:{}'.format(cases.result))
+            allure.attach('测试结果:{}'.format(result))
             # ex = DoExcel(path.case_file, 'login')
-            self.ex.write_excel(int(cases.case_id) + 1, str(cases.actual), cases.result)
-            self.loger.loggers('INFO', '测试结果:{}'.format(cases.result))
+            # self.ex.write_excel(int(cases.case_id) + 1, str(cases.actual), cases.result)
+            self.loger.loggers('INFO', '测试结果:{}'.format(result))
 
     def teardown_class(self):
         self.http.seesion.close()

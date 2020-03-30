@@ -1,0 +1,76 @@
+#登录测试用例
+-
+  case_id: 1
+  title: "手机号为空"
+  url: "/member/login"
+  method: "POST"
+  data:
+    mobilephone: ''
+    pwd: '123456'
+  expected:
+    status: 0
+    code: '20103'
+    data: null
+    msg: '手机号不能为空'
+  result: null
+-
+  case_id: 2
+  title: "密码为空"
+  url: "/member/login"
+  method: "POST"
+  data:
+    mobilephone: '18106573747'
+    pwd: null
+  expected:
+    status: 0
+    code: '20103'
+    data: null
+    msg: '密码不能为空'
+  result: null
+-
+  case_id: 3
+  title: "手机号正确，密码错误"
+  url: "/member/login"
+  method: "POST"
+  data:
+    mobilephone: '18106573747'
+    pwd: '1'
+  expected:
+    status: 0
+    code: '20111'
+    data: null
+    msg: '用户名或密码错误'
+  result: null
+-
+  case_id: 4
+  title: "手机号不正确，密码正确"
+  url: "/member/login"
+  method: "POST"
+  data:
+    mobilephone: '18106573737'
+    pwd: '123456'
+  expected:
+    status: 0
+    code: '20111'
+    data: null
+    msg: '用户名或密码错误'
+  result: null
+-
+  case_id: 5
+  title: "手机号和密码都正确"
+  url: "/member/login"
+  method: "POST"
+  data:
+    mobilephone: '18106573747'
+    pwd: '123456'
+  expected:
+    status: 1
+    code: '10001'
+    data: null
+    msg: '登录成功'
+  result: null
+
+
+
+
+
