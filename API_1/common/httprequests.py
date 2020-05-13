@@ -13,11 +13,11 @@ class HttpRequests:
     def __init__(self):
         self.seesion = requests.session()
 
-    def requests(self, method, url, data=None, json=None):
+    def requests(self, method, url,header=None,data=None, json=None):
         cf=Config(path.environment_file)
         url=cf.get_str('test','ip')+url
         if method.lower() == 'get':
-            resp = self.seesion.request(method, url, params=data)
+            resp = self.seesion.request(method, url ,headers=header,params=data)
         elif method.lower() == 'post':
             if json:
                 resp = self.seesion.request(method, url, json=json)
@@ -27,10 +27,12 @@ class HttpRequests:
 
 
 if __name__ == '__main__':
-    url = 'member/login'  # /member/register
-    data = {'mobilephone': '18106573747', 'pwd': '123456'}
+    url = '/labelInfo/hotLabel'
+    datas = {"current":1,"size":30}
+    headr={'Content-Type':'application/json'}
     req=HttpRequests()
-    resp=req.requests('get',url,data)
+    resp=req.requests('get',url,header=headr,data=datas)
     print(resp.url)
     print(resp.text)
+    print([i["id"] for i in json.loads(resp.text)["data"]["records"]])
 
